@@ -10,11 +10,5 @@
         'views/stock_location_views.xml',
         'data/ir.model.access.csv',
     ],
-    'assets': {
-        'web.assets_backend': [
-            'stock_location_code/static/src/css/styles.css',
-        ],
-    },
     'installable': True,
     'application': False,
-}
