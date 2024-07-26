@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="view_location_form_inherit" model="ir.ui.view">
         <field name="name">stock.location.form.inherit</field>
         <field name="model">stock.location</field>
         <field name="inherit_id" ref="stock.view_location_form"/>
         <field name="arch" type="xml">
-            <!-- Añadir el campo 'code' después del campo 'name' -->
+            <!-- Usamos 'xpath' para una mejor localización y modificación del campo -->
             <xpath expr="//field[@name='name']" position="after">
-                <field name="code" string="ID Netbox"/>
+                <!-- Contenedor para una disposición más elegante -->
+                <div class="oe_form_field">
+                    <label for="code" string="Location Code"/>
+                    <field name="code" placeholder="Introduce el código de la ubicación"/>
+                </div>
             </xpath>
         </field>
     </record>

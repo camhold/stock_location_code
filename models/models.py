@@ -4,7 +4,7 @@ from odoo.exceptions import ValidationError
 class StockLocation(models.Model):
     _inherit = 'stock.location'
 
-    code = fields.Char(string='ID Netbox', required=True, copy=False)
+    code = fields.Char(string='Location Code', required=True, copy=False)
 
     _sql_constraints = [
         ('code_unique', 'unique(code)', 'The location code must be unique.')
